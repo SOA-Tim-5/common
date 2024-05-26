@@ -12,6 +12,7 @@ const (
 	RollbackEncounter
 	UpdateFollower
 	RollbackFollower
+	UnknownCommand
 )
 
 type UpdateEncounterCommand struct {
@@ -31,7 +32,7 @@ const (
 	UnknownReply
 )
 
-type CreateOrderReply struct {
+type CompleteEncounterReply struct {
 	EncounterInstanceId EncounterInstanceId
 	Type                CompleteEncounterReplyType
 }
