@@ -27,6 +27,8 @@ const (
 	FollowerNotUpdated
 	FollowerRolledBack
 	UnknownReply
+	EncounterUpdated
+	EncounterCompleted
 )
 
 type CompleteEncounterReply struct {
