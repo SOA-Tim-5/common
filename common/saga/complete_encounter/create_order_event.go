@@ -8,11 +8,11 @@ type EncounterInstanceId struct {
 type CompleteEncounterCommandType int8
 
 const (
-	UpdateEncounter CompleteEncounterCommandType = iota
-	RollbackEncounter
-	UpdateFollower
+	UpdateFollower CompleteEncounterCommandType = iota
 	RollbackFollower
+	RollbackEncounter
 	UnknownCommand
+	CompleteEncounter
 )
 
 type UpdateEncounterCommand struct {
@@ -23,10 +23,7 @@ type UpdateEncounterCommand struct {
 type CompleteEncounterReplyType int8
 
 const (
-	EncounterUpdated CompleteEncounterReplyType = iota
-	EncounetrNotUpdated
-	EncounterRolledBack
-	FollowerUpdated
+	FollowerUpdated CompleteEncounterReplyType = iota
 	FollowerNotUpdated
 	FollowerRolledBack
 	UnknownReply
