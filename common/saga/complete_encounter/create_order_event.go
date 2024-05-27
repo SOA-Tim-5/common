@@ -29,6 +29,7 @@ const (
 	UnknownReply
 	EncounterUpdated
 	EncounterCompleted
+	EncounterRolledBack
 )
 
 type CompleteEncounterReply struct {
