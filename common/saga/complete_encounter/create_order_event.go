@@ -1,8 +1,9 @@
 package create_order
 
 type UpdateLevel struct {
-	UserId string
-	Level  string
+	UserId      string
+	Level       string
+	EncounterId int64
 }
 
 type CompleteEncounterCommandType int8
