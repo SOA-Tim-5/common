@@ -1,8 +1,8 @@
 package create_order
 
-type EncounterInstanceId struct {
-	Id          int64
-	EncounterId int64
+type UpdateLevel struct {
+	UserId string
+	Level  string
 }
 
 type CompleteEncounterCommandType int8
@@ -15,9 +15,9 @@ const (
 	CompleteEncounter
 )
 
-type UpdateEncounterCommand struct {
-	EncounterInstanceId EncounterInstanceId
-	Type                CompleteEncounterCommandType
+type UpdateLevelCommand struct {
+	UpdateLevel UpdateLevel
+	Type        CompleteEncounterCommandType
 }
 
 type CompleteEncounterReplyType int8
@@ -33,6 +33,6 @@ const (
 )
 
 type CompleteEncounterReply struct {
-	EncounterInstanceId EncounterInstanceId
-	Type                CompleteEncounterReplyType
+	UpdateLevel UpdateLevel
+	Type        CompleteEncounterReplyType
 }

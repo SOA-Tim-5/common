@@ -8,8 +8,13 @@ service Encounter {
     rpc CompleteMisc(EncounterInstanceId) returns (TouristProgress) {}
     rpc CompleteSocialEncounter(TouristPosition) returns (TouristProgress) {}
     rpc CompleteHiddenLocationEncounter(TouristPosition) returns (Inrange) {}
+    rpc CompleteEncounter(UpdateLevel) returns (UpdateLevel) {}
 }
 
+message UpdateLevel{
+    string UserId=1;
+    string Level=2;
+}
 
 message MiscEncounterCreateDto {
 bool ChallengeDone=1;
